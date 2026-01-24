@@ -25,5 +25,5 @@ $(brew --prefix)/opt/codex-voice/libexec/scripts/setup.sh models --base
 ## Notes
 
 - This formula builds from source (Rust + CMake required).
-- The formula is pinned to the `v1` release. Update the `url` and `sha256`
+- The formula is pinned to the `v1.0.1` release. Update the `url` and `sha256`
   when you cut a new tag.
