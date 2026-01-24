@@ -9,17 +9,17 @@ brew tap jguida941/homebrew-codex-voice
 brew install codex-voice
 ```
 
-## One-time model download
-
-```bash
-$(brew --prefix)/opt/codex-voice/libexec/scripts/setup.sh models --base
-```
-
-## Run from any project
+## Run from any project (first run downloads model if missing)
 
 ```bash
 cd ~/my-project
 codex-voice
+```
+
+## Optional model pre-download
+
+```bash
+$(brew --prefix)/opt/codex-voice/libexec/scripts/setup.sh models --base
 ```
 
 ## Notes
