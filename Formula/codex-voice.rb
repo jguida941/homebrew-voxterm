@@ -3,7 +3,7 @@ class CodexVoice < Formula
   homepage "https://github.com/jguida941/codex-voice"
   url "https://github.com/jguida941/codex-voice/archive/refs/tags/v1.0.3.tar.gz"
   version "1.0.3"
-  sha256 "e4cf6454b5d5f294b6ccb6280cfb36bf88bcc19f4564ec42dccfe724454d1a88"
+  sha256 "fb5dbefab51855228e72f88cb82b0f48e137fd351d835d9e6b628cbfba33fea4"
 
   depends_on "rust" => :build
   depends_on "cmake" => :build
