@@ -27,4 +27,4 @@ $(brew --prefix)/opt/codex-voice/libexec/scripts/setup.sh models --base
 ## Notes
 
 - Builds from source (requires Rust + CMake)
-- Current version: v1.0.13
+- Current version: v1.0.27
