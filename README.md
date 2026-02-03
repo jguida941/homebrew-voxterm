@@ -5,8 +5,15 @@ Homebrew tap for [VoxTerm](https://github.com/jguida941/voxterm) - Voice HUD for
 ## Install
 
 ```bash
-brew tap jguida941/homebrew-voxterm
+brew tap jguida941/voxterm
 brew install voxterm
+```
+
+Upgrade:
+
+```bash
+brew update
+brew upgrade voxterm
 ```
 
 ## Usage
@@ -16,7 +23,8 @@ cd ~/my-project
 voxterm
 ```
 
-First run automatically downloads the Whisper model if missing.
+First run downloads a Whisper model if missing. Homebrew installs store models at:
+`~/.local/share/voxterm/models` (override with `VOXTERM_MODEL_DIR`).
 
 ## Options
 
@@ -24,15 +32,16 @@ First run automatically downloads the Whisper model if missing.
 voxterm --help                    # Show all options
 voxterm --theme dracula           # Use a different theme
 voxterm --auto-voice              # Start with auto-voice enabled
-voxterm --backend claude          # Use Claude Code instead of Codex
+voxterm --claude                  # Use Claude Code instead of Codex
 voxterm --mic-meter               # Measure ambient/speech levels
+voxterm --hud-style hidden        # Minimal UI (blank when idle)
 ```
 
 ### Available Themes
 `chatgpt`, `claude`, `codex`, `coral` (default), `catppuccin`, `dracula`, `nord`, `tokyonight`, `gruvbox`, `ansi`, `none`
 
 ### Available Backends
-`codex` (default), `claude`, `gemini` (in works), or any custom command
+`codex` (default), `claude`
 
 ## Pre-download Whisper Model (optional)
 
@@ -48,6 +57,9 @@ $(brew --prefix)/opt/voxterm/libexec/scripts/setup.sh models --base
 | `Ctrl+V` | Toggle auto-voice |
 | `Ctrl+T` | Toggle send mode |
 | `Ctrl+Y` | Theme picker |
+| `Ctrl+O` | Settings menu |
+| `Ctrl+]` | Mic sensitivity up |
+| `Ctrl+\` | Mic sensitivity down |
 | `?` | Show help overlay |
 | `Ctrl+Q` | Quit |
 
@@ -58,7 +70,6 @@ $(brew --prefix)/opt/voxterm/libexec/scripts/setup.sh models --base
 
 ## Troubleshooting
 
-If you encounter issues:
 ```bash
 # Rebuild from source
 brew reinstall voxterm
@@ -66,6 +77,8 @@ brew reinstall voxterm
 # Check Whisper model
 ls ~/.local/share/voxterm/models/
 ```
+
+More help: https://github.com/jguida941/voxterm/blob/master/guides/TROUBLESHOOTING.md
 
 ## Version
 
